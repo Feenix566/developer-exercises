@@ -13,7 +13,7 @@ const minions = [
 ]
 
 // On the following line, make all minions attack for 9 instead of 5.
-
+Minion.prototype.power = () => 9;
 // You are only allowed to write one line of code.
 
 minions.push(new Minion())

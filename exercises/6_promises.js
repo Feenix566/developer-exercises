@@ -12,8 +12,10 @@ above that waits 1 second before writing "I waited 1 second"
 to the console, waits 2 more seconds and then writes
 "I waited 2 more seconds"
 */
-
-
+wait(1)
+  .then(() => console.log('I waited 1 second'))
+  .then(() => wait(2))
+  .then(() => console.log('I waited 2 more seconds'));
 
 /*
 You console output should look like the following AND wait the

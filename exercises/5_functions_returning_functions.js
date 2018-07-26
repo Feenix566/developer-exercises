@@ -6,6 +6,7 @@ function createAddFunction(numberToAdd) {
   the value of numberToAdd to whatever number parameter is passed to the
   returned function
   */
+  return num => num + numberToAdd;
 }
 
 // this should set addFive to a function that will add 5 to whatever

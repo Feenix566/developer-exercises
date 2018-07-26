@@ -5,6 +5,7 @@ const oneToFive = [1, 2, 3, 4, 5]
 var totalOfOddDigits = oneToFive.reduce(function(accumulator, currentValue) {
   // Code this reducer so that the result is the sum
   // of only the odd digits
+  return accumulator + (currentValue % 2 ? currentValue : 0);
 }, 0)
 
 console.log('The total is %d', totalOfOddDigits)

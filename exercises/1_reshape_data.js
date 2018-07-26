@@ -65,6 +65,10 @@ function flattenRideshareArray(array) {
   var newArray = array.map(function(element) {
     // Add code here so that flattenRideshareArray will change
     // initialArray into an array that is equal to expectedArray
+    return {
+      rideShareId: element.rideShareId,
+      numberMembers: element.members.length,
+    };
   })
 
   return newArray

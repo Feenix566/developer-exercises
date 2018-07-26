@@ -10,6 +10,30 @@ function paintMixer(color1, color2) {
 
   The order of the params should not matter.
   */
+  var colors = {
+    blue: false,
+    red: false,
+    green: false,
+    yellow: false,
+  };
+  var hasUnknownColors = !colors.hasOwnProperty(color1) || !colors.hasOwnProperty(color2);
+
+  if(hasUnknownColors) {
+    return 'unknown';
+  }
+  Object.keys(colors).forEach(key => {
+    colors[key] = color1 === key || color2 === key;
+  });
+  if (colors.blue && colors.red) {
+    return 'purple';
+  }
+  if (colors.green && colors.red) {
+    return 'brown';
+  }
+  if (colors.blue && colors.yellow) {
+    return 'green';
+  }
+  return 'unknown';
 }
 
 paintMixer('blue', 'red') === 'purple' && console.log('First mix worked')
